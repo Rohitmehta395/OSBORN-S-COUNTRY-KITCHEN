@@ -4,10 +4,10 @@
  */
 export const SEQUENCE_CONFIG = {
   // Total number of animation frames
-  totalFrames: 211,
+  totalFrames: 215,
   
-  // Character padding width (e.g. 3 for frame_001.webp, 4 for frame_0001.webp)
-  paddingWidth: 4,
+  // Character padding width (e.g. 3 for frame_001.webp, 5 for frame_00001.webp)
+  paddingWidth: 5,
   
   // Directory where image frames are stored relative to the public/ directory
   frameDir: '/frames',
