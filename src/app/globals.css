@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #F8F2E9;
+  --color-primary: #6A4B34;
+  --color-secondary: #E4C9A8;
+  --color-accent: #B55445;
+  --color-dark: #2B211B;
+  --color-text: #2B211B;
+  
+  --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-inter), "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --background: #F8F2E9;
+  --foreground: #2B211B;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium utility classes */
+.glassmorphism {
+  background: rgba(248, 244, 238, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 69, 19, 0.08);
+}
+
+.glassmorphism-dark {
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(217, 160, 102, 0.08);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::selection {
+  background-color: #8B4513;
+  color: #F8F4EE;
+}
+
+/* Custom animations helper classes */
+.split-char {
+  display: inline-block;
+}
+
+.split-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Smooth Scrolling Overrides */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis-scrolling iframe {
+  pointer-events: none;
+}
